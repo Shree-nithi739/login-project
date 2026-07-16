@@ -1,0 +1,5 @@
+$cfg['Servers'][$i]['host']
+$cfg['Servers'][$i]['user']
+$cfg['Servers'][$i]['password']
+$cfg['Servers'][$i]['controluser']
+$cfg['Servers'][$i]['controlpass']

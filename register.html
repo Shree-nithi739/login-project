@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>User Registration</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>Create Account</h2>
+
+        <form action="register.php"
+              method="POST"
+              enctype="multipart/form-data"
+              onsubmit="return validateRegister();">
+
+            <!-- Profile Image -->
+
+            <div class="profile-preview">
+
+                <img src="assets/images/default.png"
+                     id="preview"
+                     alt="Profile">
+
+            </div>
+
+            <div class="input-group">
+
+                <label>Profile Image</label>
+
+                <input
+                    type="file"
+                    name="profile"
+                    accept="image/*"
+                    onchange="previewImage(event)"
+                    required>
+
+            </div>
+
+            <!-- Username -->
+
+            <div class="input-group">
+
+                <label>Username</label>
+
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Enter Username"
+                    required>
+
+            </div>
+
+            <!-- Email -->
+
+            <div class="input-group">
+
+                <label>Email</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter Email"
+                    required>
+
+            </div>
+
+            <!-- Phone -->
+
+            <div class="input-group">
+
+                <label>Phone Number</label>
+
+                <input
+                    type="text"
+                    id="phone"
+                    name="phone"
+                    maxlength="10"
+                    placeholder="Enter Phone Number"
+                    required>
+
+            </div>
+
+            <!-- Password -->
+
+            <div class="input-group">
+
+                <label>Password</label>
+
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Enter Password"
+                    required>
+
+            </div>
+
+            <!-- Confirm Password -->
+
+            <div class="input-group">
+
+                <label>Confirm Password</label>
+
+                <input
+                    type="password"
+                    id="confirm_password"
+                    name="confirm_password"
+                    placeholder="Confirm Password"
+                    required>
+
+            </div>
+
+            <!-- Show Password -->
+
+            <div class="input-group">
+
+                <input
+                    type="checkbox"
+                    onclick="togglePassword('password');
+                             togglePassword('confirm_password');">
+
+                Show Password
+
+            </div>
+
+            <!-- Address -->
+
+            <div class="input-group">
+
+                <label>Address</label>
+
+                <textarea
+                    id="address"
+                    name="address"
+                    rows="3"
+                    placeholder="Enter Address"
+                    required></textarea>
+
+            </div>
+
+            <!-- Date of Birth -->
+
+            <div class="input-group">
+
+                <label>Date of Birth</label>
+
+                <input
+                    type="date"
+                    id="dob"
+                    name="dob"
+                    required>
+
+            </div>
+
+            <!-- Gender -->
+
+            <div class="input-group">
+
+                <label>Gender</label>
+
+                <input
+                    type="radio"
+                    name="gender"
+                    value="Male"
+                    required> Male
+
+                &nbsp;&nbsp;
+
+                <input
+                    type="radio"
+                    name="gender"
+                    value="Female"> Female
+
+                &nbsp;&nbsp;
+
+                <input
+                    type="radio"
+                    name="gender"
+                    value="Other"> Other
+
+            </div>
+
+            <!-- Register Button -->
+
+            <button
+                type="submit"
+                class="btn">
+
+                Register
+
+            </button>
+
+        </form>
+
+        <div class="link">
+
+            Already have an account?
+
+            <a href="login.html">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>
